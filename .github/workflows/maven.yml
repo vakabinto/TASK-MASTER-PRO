@@ -30,5 +30,4 @@ jobs:
           kubeconfig: ${{ secrets.KUBECONFIG_PROD }}
           args: apply -f ./k8s/manifests/Deployment.yml
 
-
     
