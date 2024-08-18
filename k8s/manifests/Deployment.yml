@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: task-master-pro
-          image: vakabinto/task-master-pro:latest # Image that will be used to access the containers in the cluster
+          image: vakabinto/prod-task-master-pro:latest # Image that will be used to access the containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
