@@ -27,7 +27,7 @@ jobs:
     - name: Kubernetes deployment
       uses: danielr1996/kubectl-action@1.0.0
       with:
-          kubeconfig: ${{ secrets.KUBECONFIG }}
+          kubeconfig: ${{ secrets.KUBECONFIG_PROD }}
           args: apply -f ./k8s/manifests/Deployment.yml
 
 
