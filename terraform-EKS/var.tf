@@ -7,5 +7,5 @@ variable "ssh_key_name" {
 variable "aws_region" {
   description = "The AWS region where the EKS cluster will be created"
   type        = string
-  default     = "us-west-2"  # Or your desired default region
+  default     = "us-east-1"  # Or your desired default region
 }
