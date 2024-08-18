@@ -24,6 +24,7 @@ jobs:
           docker tag vakabinto/task-master-pro:latest vakabinto/prod-task-master-pro:latest
           docker push vakabinto/prod-task-master-pro:latest
 
+
     - name: Kubernetes deployment
       uses: danielr1996/kubectl-action@1.0.0
       with:
