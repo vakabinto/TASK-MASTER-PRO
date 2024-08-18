@@ -56,7 +56,7 @@ jobs:
       
     - name: Build Push Image
       run: |
-          docker push -t vakabinto/task-master-pro:latest
+          docker push vakabinto/task-master-pro:latest
           
     - name: Kubernetes deployment
       uses: danielr1996/kubectl-action@1.0.0
