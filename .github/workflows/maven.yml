@@ -1,5 +1,5 @@
 
-name:   CI-PROD
+name:   CD-PROD
 
 on:
   push:
