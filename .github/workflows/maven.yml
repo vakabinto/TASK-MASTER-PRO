@@ -63,6 +63,4 @@ jobs:
       with:
           kubeconfig: ${{ secrets.KUBECONFIG }}
           args: apply -f ./k8s/manifests/Deployment.yml
-
-#
     
