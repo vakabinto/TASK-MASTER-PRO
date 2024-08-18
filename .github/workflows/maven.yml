@@ -44,7 +44,7 @@ jobs:
         name: Build Image
         uses: docker/build-push-action@v6
         run: |
-          docker build -t vakabinto/Task-master:latest .
+          docker build -t vakabinto/task-master-pro:latest .
       - name: TRIVY IMAGE SCAN
         run: trivy image --format table -o image.html vakabinto/Task-master:latest
          -
@@ -57,5 +57,11 @@ jobs:
         name: Build Push Image
         uses: docker/build-push-action@v6
         run: |
-          docker push -t vakabinto/Task-master:latest
+          docker push -t vakabinto/task-master-pro:latest
+          
+      - name: Kubernetes deployment
+        uses: danielr1996/kubectl-action@1.0.0
+        with:
+          kubeconfig: ${{ secrets.KUBECONFIG }}
+          args: apply -f deployment.yaml
     
