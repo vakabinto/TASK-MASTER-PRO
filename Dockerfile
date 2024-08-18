@@ -6,7 +6,8 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 FROM gcr.io/distroless/java17-debian11
-COPY --from=base /app/target/*.jar .
+WORKDIR /app
+COPY --from=base /app/target/*.jar /app/app.jar
 COPY --from=base /app/src .
 EXPOSE 8080
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+ENTRYPOINT [ "java", "-jar", "/app/app.jar" ]
