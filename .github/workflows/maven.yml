@@ -62,5 +62,5 @@ jobs:
       uses: danielr1996/kubectl-action@1.0.0
       with:
           kubeconfig: ${{ secrets.KUBECONFIG }}
-          args: apply -f deployment.yaml
+          args: apply -f ./k8s/manifests/Deployment.yml
     
